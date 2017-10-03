@@ -1,0 +1,19 @@
+﻿.defaultTableStyle
+{
+    width: 100%;
+}
+.BorderBlue
+{
+    border-color:#0099FF; 
+     border-width: 1px; 
+     border-style: solid;
+    
+   
+}
+.BorderOrange
+{
+     border-color: Orange; 
+     border-width: 1px; 
+     border-style: solid;
+}
+

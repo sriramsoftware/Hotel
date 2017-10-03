@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs"
+    Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Hotel</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="../CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+        <link href="../CSS/TotalStyle.css" rel="stylesheet" type="text/css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table style="width: 90%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="header" valign="top">
+            </td>
+        </tr>
+        <tr>
+            <td class="contenet" align="center">
+                <div id="topPan">
+                    <ul>
+                        <li><span>
+                            <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Log out</asp:LinkButton></span></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <table class="defaultTableStyle" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td valign="top" style="width: 20%">
+                                        <div class="box-blue" style="background-color: White">
+                                            <h2 class="section">
+                                                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td align="center">
+                                                            <b>
+                                                                <asp:Label ID="Label2" runat="server" Text="Profile"></asp:Label>
+                                                            </b>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </h2>
+                                            <div class="content BorderBlue" style="padding-top: 10px; padding-left: 20px">
+                                                <table style="width: 100%;">
+                                                    <tr>
+                                                        <td align="left">
+                                                            <ul>
+                                                                <li>
+                                                                    <asp:LinkButton ID="LinkButtonCity" runat="server" Text="City" PostBackUrl="~/Admin/AdminCity.aspx"></asp:LinkButton>
+                                                                </li>
+                                                                <li>
+                                                                    <asp:LinkButton ID="LinkButtonHotel" runat="server" Text="Hotel" PostBackUrl="~/Admin/AdminHotel.aspx"></asp:LinkButton>
+                                                                </li>
+                                                                <li>
+                                                                    <asp:LinkButton ID="LinkButtonInquiry" runat="server" Text="Inquiry" PostBackUrl="~/Admin/AdminInquiry.aspx"></asp:LinkButton>
+                                                                </li>
+                                                                <li>
+                                                                    <asp:LinkButton ID="LinkButtonRoomtype" runat="server" Text="Room Type" PostBackUrl="~/Admin/RoomType.aspx"></asp:LinkButton>
+                                                                </li>
+                                                                <li>
+                                                                    <asp:LinkButton ID="LinkButton2" runat="server" Text="Hotel Rooms" PostBackUrl="~/Admin/HotelRoom.aspx"></asp:LinkButton>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="width: 5%">
+                                    </td>
+                                    <td style="width: 75%" valign="top" align="center">
+                                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="footer">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

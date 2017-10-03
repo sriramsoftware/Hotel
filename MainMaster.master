@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMaster.master.cs" Inherits="MainMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/TotalStyle.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/NewStyle.css" rel="stylesheet" type="text/css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <center>
+        <table style="width: 90%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="header" valign="top" align="center">
+                    <asp:Image ID="Image1" runat="server" 
+                        ImageUrl="~/images/mumbai-hotel-banner.gif" Height="170px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="contenet" align="center">
+                    <div id="topPan">
+                        <ul>
+                            <li><span><a href="Home.aspx"><style= "bgcolor: Red">Home</style></a></span></li>
+                            <li><a href="ShowAllHotel.aspx">Hotel</a></li>
+                            <li><a href="Services.aspx">Services</a></li>
+                            <li><a href="AboutUs.aspx">About Us</a></li>
+                            <li class="contact"><a href="ContactAs.aspx" class="contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width: 100%">
+                        <tr>
+                            <td>
+                                <table class="defaultTableStyle" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td valign="top" style="width: 20%">
+                                            <div class="box-blue" style="background-color: White">
+                                                <h2 class="section">
+                                                    <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td align="center">
+                                                                <b>
+                                                                    <asp:Label ID="Label2" runat="server" Text="City"></asp:Label>
+                                                                </b>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </h2>
+                                                <div class="content BorderBlue" style="padding-top: 10px; padding-left: 20px">
+                                                    <table style="width: 100%;">
+                                                        <tr>
+                                                            <td align="left">
+                                                                <asp:DataList ID="DataListCity" runat="server" Width="100%" 
+                                                                    onitemcommand="DataListCity_ItemCommand">
+                                                                    <ItemTemplate>
+                                                                        <table style="width:100%">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:LinkButton ID="LinkButtonCity" runat="server" CommandArgument='<%# bind("CityID") %>' Text='<%# bind("CityName") %>' CommandName="City" ></asp:LinkButton>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </ItemTemplate>
+                                                                </asp:DataList>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="width: 5%">
+                                        </td>
+                                        <td style="width: 75%" valign="top">
+                                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer">
+                </td>
+            </tr>
+        </table>
+    </center>
+    </form>
+</body>
+</html>
